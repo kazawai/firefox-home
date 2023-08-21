@@ -1,0 +1,90 @@
+body{
+  background-color: #14171c;
+}
+
+.main-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  text-align: center;
+  gap: 15% !important;
+  align-items: center;
+}
+
+.flex-row-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.flex-column-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+p{
+  opacity: .8;
+}
+a{
+  opacity: .8;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-command{
+  color: #cfccc9;
+  font-size: 60px;
+  font-family: system-ui;
+}
+
+@keyframes blink{
+  0%{ opacity: 0; } 
+  50%{ opacity: .8; }
+  100%{ opacity: 0; }
+}
+
+.title-command-cursor{
+  animation: blink 1.2s linear infinite;
+}
+
+.bookmarks-container{
+  gap: 50px;
+}
+
+.bookmark-title{
+  color: #cfccc9;
+  font-size: 30px;
+  font-family: system-ui;
+  transition: .3s ease-out;
+  margin: 0;
+}
+.bookmark-title:hover{
+  color: #4d4168;
+}
+
+.bookmark{
+  color: #988ab6;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: system-ui;
+  transition: .3s ease-out;
+}
+.bookmark:hover{
+  color: #4d4168;
+  text-decoration: underline;
+}
+
