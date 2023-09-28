@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>~/homepage</title>
-  <link rel="stylesheet" href="css/main.css"> 
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
   <body>
     <main>
       <div class="flex-row-container main-container">
-        <div class="image-container rihgt-container">
+        <div class="image-container right-container">
           <img class="main-img" src="css/menhera-icon.png">
         </div>
         <div class="flex-column-container left-container">
-          <div class="title"><p class="title-command">&gt; cd ~/</p><p class="title-command-cursor title-command">_</p></div>
+          <div id="title-command" class="title"><p class="title-command">&gt; cd ~/</p><span id="command-input" class="command-input" role="textbox" contenteditable></span><p class="title-command-cursor title-command">_</p></div>
           <div class="flex-row-container bookmarks-container">
             <div class="bookmark-column flex-column-container">
               <p class="bookmark-title">daily</p>
-              <a href="https://mail.google.com/mail/u/0/" class="bookmark">mail</a>
+              <a href="https://mail.proton.me/u/0/inbox" class="bookmark">mail</a>
               <a href="https://www.youtube.com" class="bookmark">youtube</a>
               <a href="https://www.reddit.com/" class="bookmark">reddit</a>
               <a href="https://www.pinterest.com/" class="bookmark">pinterest</a>
@@ -48,4 +48,6 @@
       </div>
     </main>
   </body>
+
+  <script src="index.js"></script>
 </html>
