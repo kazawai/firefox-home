@@ -45,6 +45,7 @@ a{
   text-align: center;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .title-command{
@@ -103,8 +104,65 @@ a{
   padding: 0 5px;
   opacity: .8;
   caret-color: transparent;
+  max-width: 250px;
+  position: relative;
 }
 .command-input:focus{
   outline: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.text-input-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.text-autocomplete{
+  color: #14171c;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: system-ui;
+  transition: .3s ease-out;
+  margin: 0;
+  padding: 0 5px;
+  opacity: .8;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  right: 0%;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.text-autocomplete div{
+  padding: 5px;
+  background-color: #cfccc9;
+  color: #14171c;
+  transition: .3s ease-out;
+  width: fit-content;
+  text-align: left;
+  z-index: 99;
+  border-radius: 5px;
+}
+
+.text-autocomplete div:hover{
+  background-color: #4d4168;
+  color: #cfccc9;
+}
+
+.text-autocomplete.hidden{
+  display: none;
+}
+
+.text-autocomplete-active{
+  background-color: #4d4168;
+  color: #cfccc9;
 }
 
