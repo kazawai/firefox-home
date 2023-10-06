@@ -45,7 +45,9 @@ a{
   text-align: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 1;
+  position: relative;
 }
 
 .title-command{
@@ -105,7 +107,6 @@ a{
   opacity: .8;
   caret-color: transparent;
   max-width: 250px;
-  position: relative;
 }
 .command-input:focus{
   outline: none;
@@ -121,7 +122,6 @@ a{
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 .text-autocomplete{
@@ -134,7 +134,7 @@ a{
   padding: 0 5px;
   opacity: .8;
   position: absolute;
-  top: 100%;
+  top: 69%;
   left: 0%;
   right: 0%;
   z-index: 99;
@@ -142,19 +142,22 @@ a{
 }
 
 .text-autocomplete div{
-  padding: 5px;
-  background-color: #cfccc9;
-  color: #14171c;
+  padding: 5px 10px;
+  background-color: rgba(207, 204, 201, 0.2);
+  color: #cfccc9;
   transition: .3s ease-out;
+  margin-bottom: 5px;
   width: fit-content;
   text-align: left;
-  z-index: 99;
+  z-index: 1;
   border-radius: 5px;
+  border: 1px solid rgb(207, 204, 201);
 }
 
 .text-autocomplete div:hover{
-  background-color: #4d4168;
-  color: #cfccc9;
+  background-color: rgba(207, 204, 201, 0.8);
+  color: #14171c;
+  border-color: rgba(207, 204, 201, 0.8);
 }
 
 .text-autocomplete.hidden{
@@ -166,3 +169,5 @@ a{
   color: #cfccc9;
 }
 
+.inner { height: auto; z-index: 1; }
+.full-height { height: 83px; width: fit-content; overflow: scroll; }
