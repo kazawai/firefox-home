@@ -1,8 +1,13 @@
-body{
+body {
+  background-image: url("./polygon-scatter-haikei.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #14171c;
+  color: #cfccc9;
 }
 
-.main-container{
+.main-container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -13,7 +18,7 @@ body{
   align-items: center;
 }
 
-.flex-row-container{
+.flex-row-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +27,7 @@ body{
   gap: 30px;
 }
 
-.flex-column-container{
+.flex-column-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,14 +36,25 @@ body{
   gap: 10px;
 }
 
-p{
-  opacity: .8;
-}
-a{
-  opacity: .8;
+.flex-column-container .bookmark-column {
+  background-color: rgba(20, 23, 28, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  border: 1px solid rgba(207, 204, 201, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.title{
+p {
+  opacity: 0.8;
+}
+a {
+  opacity: 0.8;
+}
+
+.title {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,73 +66,79 @@ a{
   position: relative;
 }
 
-.title-command{
+.title-command {
   color: #cfccc9;
   font-size: 60px;
   font-family: system-ui;
 }
 
-@keyframes blink{
-  0%{ opacity: 0; } 
-  50%{ opacity: .8; }
-  100%{ opacity: 0; }
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.title-command-cursor{
+.title-command-cursor {
   animation: blink 1.2s linear infinite;
 }
 
-.bookmarks-container{
+.bookmarks-container {
   gap: 50px;
 }
 
-.bookmark-title{
+.bookmark-title {
   color: #cfccc9;
   font-size: 30px;
   font-family: system-ui;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   margin: 0;
 }
-.bookmark-title:hover{
+.bookmark-title:hover {
   color: #4d4168;
 }
 
-.bookmark{
+.bookmark {
   color: #988ab6;
   font-size: 25px;
   text-decoration: none;
   font-family: system-ui;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
-.bookmark:hover{
+.bookmark:hover {
   color: #4d4168;
   text-decoration: underline;
 }
 
-.command-input{
+.command-input {
   font-family: system-ui;
   font-size: 40px;
   color: #cfccc9;
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   text-align: center;
   margin: 0;
   padding: 0 5px;
-  opacity: .8;
+  opacity: 0.8;
   caret-color: transparent;
   max-width: 250px;
 }
-.command-input:focus{
+.command-input:focus {
   outline: none;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.text-input-container{
+.text-input-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,15 +146,15 @@ a{
   text-align: center;
 }
 
-.text-autocomplete{
+.text-autocomplete {
   color: #14171c;
   border-radius: 5px;
   font-size: 20px;
   font-family: system-ui;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   margin: 0;
   padding: 0 5px;
-  opacity: .8;
+  opacity: 0.8;
   position: absolute;
   top: 69%;
   left: 0%;
@@ -141,11 +163,11 @@ a{
   cursor: pointer;
 }
 
-.text-autocomplete div{
+.text-autocomplete div {
   padding: 5px 10px;
   background-color: rgba(207, 204, 201, 0.2);
   color: #cfccc9;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   margin-bottom: 5px;
   width: fit-content;
   text-align: left;
@@ -154,20 +176,42 @@ a{
   border: 1px solid rgb(207, 204, 201);
 }
 
-.text-autocomplete div:hover{
+.text-autocomplete div:hover {
   background-color: rgba(207, 204, 201, 0.8);
   color: #14171c;
   border-color: rgba(207, 204, 201, 0.8);
 }
 
-.text-autocomplete.hidden{
+.text-autocomplete.hidden {
   display: none;
 }
 
-.text-autocomplete-active{
+.text-autocomplete-active {
   background-color: #4d4168;
   color: #cfccc9;
 }
 
-.inner { height: auto; z-index: 1; }
-.full-height { height: 83px; width: fit-content; overflow: scroll; }
+.inner {
+  height: auto;
+  z-index: 1;
+}
+.full-height {
+  height: 83px;
+  width: fit-content;
+  overflow: scroll;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(207, 204, 201, 0.2);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
